@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фестиваль школьного спорта 2025</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="assets/fonts/v_BadaBoomBB_v1.9.ttf" as="font" type="font/ttf" crossorigin>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-bg">
+      <!-- SVG вспышка, точки, динамичные формы -->
+      <svg class="hero-dots" width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:5%;top:30%;z-index:0;">
+        <g fill="#ffa751">
+          <circle cx="10" cy="10" r="3"/>
+          <circle cx="30" cy="20" r="3"/>
+          <circle cx="60" cy="10" r="3"/>
+          <circle cx="90" cy="25" r="3"/>
+          <circle cx="110" cy="15" r="3"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-characters">
+      <div class="hero-logo-row">
+        <img src="assets/images/FirstLogo.svg" alt="Логотип фестиваля" class="hero-logo">
+      </div>
+      <div class="hero-people-row">
+        <img src="assets/images/girl3.svg" alt="Девочка" class="hero-girl">
+        <img src="assets/images/boy2.svg" alt="Мальчик" class="hero-boy">
+      </div>
+    </div>
+  </header>
+
+  <h1 class="hero-title">Фестиваль школьного спорта!</h1>
+  <a href="#activities" class="hero-btn">Хочу участвовать</a>
+
+  <main>
+    <div class="container">
+      <section class="festival-desc">
+        <!-- Описание фестиваля будет подгружено из JSON -->
+      </section>
+    </div>
+    <section id="activities" class="activities">
+      <div class="cards-swiper-wrap">
+        <h2>Активности</h2>
+        <!-- Swiper -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <div class="swiper cards-swiper" id="cards-swiper">
+          <div class="swiper-wrapper" id="cards-grid">
+            <!-- Карточки активностей рендерятся скриптом -->
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </section>
+    <div class="container">
+      <section id="sections">
+        <!-- Отдельные блоки активностей рендерятся скриптом -->
+      </section>
+    </div>
+    <div class="container">
+      <section class="partners">
+        <h2>Партнёры</h2>
+        <div class="partners-logos" id="partners-logos"></div>
+      </section>
+    </div>
+    <div class="container">
+      <section class="map-block">
+        <h2>Где проходит фестиваль?</h2>
+        <div id="yandex-map" style="width:100%;height:400px;"></div>
+        <p>Олимпийский комплекс «Лужники», Южное спортивное ядро</p>
+      </section>
+    </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <img src="assets/images/logo.png" alt="Логотип фестиваля" class="footer-logo">
+      <div class="footer-contacts">
+        <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+        <p>E-mail: <a href="mailto:info@festival.ru">info@festival.ru</a></p>
+        <div class="footer-social">
+          <a href="#" class="vk">VK</a>
+          <a href="#" class="tg">Telegram</a>
+          <a href="#" class="site">МЦВП</a>
+        </div>
+      </div>
+      <button class="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'});">Наверх</button>
+    </div>
+    <div class="footer-note">
+      <small>Фестиваль организован при поддержке Департамента образования и науки города Москвы, ГБОУ ДПО МЦВП</small>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

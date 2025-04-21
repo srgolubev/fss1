@@ -1,0 +1,148 @@
+{
+  "festivalDesc": "Не все герои носят яркие костюмы и обладают сверхспособностями. Некоторые из них каждый день отправляются в школу или колледж, занимаются спортом и добиваются невероятных высот.\n\nПредставьте себе мир, где школьники, студенты и их наставники становятся настоящими героями. В нашем уникальном комиксе оживают реальные истории, и вы погрузитесь в мир, где молодые спортсмены стремятся к своим мечтам.\n\nВозможно, вы не всегда замечаете этих героев, но они среди нас – на нашем Фестивале школьного спорта! Здесь их достижения и упорство становятся источником вдохновения для каждого жителя Москвы.\n\nИтак, мы начинаем путешествие по страницам нашего комикса!",
+  "activities": [
+    {
+      "title": "АЭРОБИКА-ФЕСТ",
+      "desc": "Заяви о себе и зарядись позитивом! Хочешь выполнять доступные движения в динамике под музыку? Тогда к нам на «АЭРОБИКУ-ФЕСТ» — уникальный формат для участников от 5 до 23 лет! Обо всем остальном позаботимся мы. Полное погружение в выступления и тренировки по направлениям фитнес-аэробики: – Аэробика – Степ-аэробика – Хип-хоп – Хип-хоп (большая группа) – Ритмическая гимнастика. Не упусти шанс стать лучшим в своей дисциплине. Готовься и покажи, на что ты способен! Тебе будет комфортно с нами, даже если ты участвуешь впервые. Ждём тебя!",
+      "images": [
+        "assets/images/222.jpg"
+      ],
+      "category": "5–23 лет"
+    },
+    {
+      "title": "Настольный теннис",
+      "desc": "Быть в хорошей форме важно для здоровья. Настольный теннис — отличный способ поддерживать физическую форму, улучшать координацию и концентрацию. Приглашаем тебя сыграть самую запоминающуюся партию в спортивном сердце города! Тут ты отлично проведешь время, найдешь новых друзей и улучшишь здоровье. Подходит для любой категории участников.",
+      "images": [
+        "assets/images/0z95-YNpfLTJooDyobRaXup7sGzA3gd_FMA0NwibcRgus7qGrW-4atfaBBD9ZeHaOmVHHB29FGsUWjrY3efNiw6J.jpg",
+        "assets/images/1NSnbeglf6gK550gs4eIkbJJIuHa8fTQugQHWHmDa6NeNhq9IYd7PUrwHvtqUzWBgHYYqsXVE5Z6Yl1oZdjc6519.jpg",
+        "assets/images/Y-VFv3BWdFxmKSHPlrA7LJO9LJc9SwEFsIsw9jFjBRJ0fDIaq5HVlwLCauh7xwQ-RmXii2NBwFRHR5jDKU8Ah4Js.jpg",
+        "assets/images/uuPxtfpQzhg4-1FK_tS1QBvIznvnifnZL8lI06Bw84hvU8Wyd_ECAie9oP1nX905SoUIEJxxsFdDTw67Eip5WJk6.jpg",
+        "assets/images/W56oMDua6PJVeApS8aEYGnhYl7zN7n-W6S7RQDDnAWvbFbVB8mZoUxLW8l-TPz3EFxVjzOupdW5vVWWW__puZn8R.jpg"
+      ],
+      "category": "Для всех"
+    },
+    {
+      "title": "Аэрохоккей",
+      "desc": "Какое развлечение понравится быстрым, ловким и азартным людям всех возрастов? Определенно — аэрохоккей! От этого развлечения невозможно оторвать ни ребёнка, ни взрослого. А все супергерои играют в него вместо зарядки! Стань и ты супергероем этого города — забей другу самый необычный гол!",
+      "images": [
+        "assets/images/jKzqcgX7ZPI8SCQE_Fs37ubyYOWEHQYwF6dHvRe3iiqw5HqLVD_EnJwGFrnTHxFUpStIeFL2iKOSwkEpgqp4Z2y2.jpg",
+        "assets/images/TfvKkeWSCVDm6I6H3FirmhhLh93FNMwI5OqYXGK1dTRm3D8QLa4GDX0YS86etmGfb0p8isBrF1UnuhJIOWtzfosk.jpg"
+      ],
+      "category": "Для всех"
+    },
+    {
+      "title": "Панна-футбол",
+      "desc": "Приглашаем всех на поединок уличного футбола. ДА-ДА, именно уличного! Не слышали о таком направлении? Тогда вам точно нужно посетить площадку панна-футбола. Приводите с собой друзей, родителей и учителей! Попробуй свои силы и забей максимальное количество голов сопернику! Подходит для любой категории участников.",
+      "images": [
+        "assets/images/qtUK-zWH_MJWXn_EUlvjqqi5fYAyCnDQyzF9_gqtKNjEnzTt8uzjRlK62hvNKT7uO_2zEhhT7HpB1Mbbwz8lvnlE.jpg",
+        "assets/images/sRVoBG-LYdpHLXFRW7sHguSy2li6IXtKeE3SoAaxF-aX2u3qBNQ-lFUlLBIdPgMPWDGo_wxffHROuhvomdnH6GZd.jpg",
+        "assets/images/Nccc2nuCFV4fmG5RyJT2U8SBWERvbDzz7VK9rVeA9R-8MOVS6q9wimyVZ7rWyTcP0QJIN2QSWBie0n03zegDEdiy.jpg",
+        "assets/images/EvOGDGulg9_zjAUVNtLmaoEmC3mK_rlkszXtQ9B8D-OKTG-qyZ_-jYePyz1HJsdvo6UYjChPPxZTyIMDF1luyYBl.jpg"
+      ],
+      "category": "Для всех"
+    },
+    {
+      "title": "Настольный футбол",
+      "desc": "Накал страстей, азарт, точность и концентрация — всё это в локации “Настольный футбол”. Если ты отличный тактик и стратег — это твой звёздный час. Прояви себя и сразись в увлекательных настольных матчах! Подходит для любой категории участников.",
+      "images": [
+        "assets/images/PP8D9bypvGQHoIxuVeHvgxszAcl4-78lKhwsEz4M2Z-SkNain0HMjonuz5yRSB9m2_V1OSawdjs1SpezU6wFMkyv.jpg",
+        "assets/images/7YyubKDW9IrV4V-MLI66Hz3qLFIP6qvgIrmNEuGVhLsoJfDxNALxv72HB8Cvg3saUwG5y1XeHB_9cz4V--t7siHX.jpg",
+        "assets/images/7YyubKDW9IrV4V-MLI66Hz3qLFIP6qvgIrmNEuGVhLsoJfDxNALxv72HB8Cvg3saUwG5y1XeHB_9cz4V--t7siHX.jpg",
+        "assets/images/GvpYeVrr_gbMC7cR7gbh55DTeHr5jkW1JdWhu3PRwLd-owQd4tBtoQj1sF2dat-q5CAmVoCkjQZrPaAAoHl6DR6_.jpg",
+        "assets/images/Q8bsqduqASn3nQxtDmVoBjdw5pZEpmuFVE9dzq1n4YyiWn-gKkKneMx1a_0OfE7fKp-OI1VSh_-P_MoGatBkTEB3.jpg"
+      ],
+      "category": "Для всех"
+    },
+    {
+      "title": "Джампинг",
+      "desc": "Хочешь получить заряд бодрости и позитива? Тогда не забывай спортивную форму и скорее занимай место на Джампинге! Это отличная возможность не только зажечь все Лужники, но и улучшить свою физическую форму! Категория участников — 10+",
+      "images": [
+        "assets/images/Y-VFv3BWdFxmKSHPlrA7LJO9LJc9SwEFsIsw9jFjBRJ0fDIaq5HVlwLCauh7xwQ-RmXii2NBwFRHR5jDKU8Ah4Js.jpg",
+        "assets/images/uuPxtfpQzhg4-1FK_tS1QBvIznvnifnZL8lI06Bw84hvU8Wyd_ECAie9oP1nX905SoUIEJxxsFdDTw67Eip5WJk6.jpg",
+        "assets/images/W56oMDua6PJVeApS8aEYGnhYl7zN7n-W6S7RQDDnAWvbFbVB8mZoUxLW8l-TPz3EFxVjzOupdW5vVWWW__puZn8R.jpg",
+        "assets/images/jKzqcgX7ZPI8SCQE_Fs37ubyYOWEHQYwF6dHvRe3iiqw5HqLVD_EnJwGFrnTHxFUpStIeFL2iKOSwkEpgqp4Z2y2.jpg",
+        "assets/images/TfvKkeWSCVDm6I6H3FirmhhLh93FNMwI5OqYXGK1dTRm3D8QLa4GDX0YS86etmGfb0p8isBrF1UnuhJIOWtzfosk.jpg"
+      ],
+      "category": "10+"
+    },
+    {
+      "title": "Гольф",
+      "desc": "Точность, концентрация, удар — и ты победитель! Всё это складывается в одном спортивном направлении — гольф. Забудьте о повседневной суете, освободите свою энергию, погрузитесь в мир гольфа вместе с нами. Ведь гольф — это гарантия активного и здорового образа жизни! Подходит для любой категории участников.",
+      "images": [
+        "assets/images/qtUK-zWH_MJWXn_EUlvjqqi5fYAyCnDQyzF9_gqtKNjEnzTt8uzjRlK62hvNKT7uO_2zEhhT7HpB1Mbbwz8lvnlE.jpg",
+        "assets/images/sRVoBG-LYdpHLXFRW7sHguSy2li6IXtKeE3SoAaxF-aX2u3qBNQ-lFUlLBIdPgMPWDGo_wxffHROuhvomdnH6GZd.jpg",
+        "assets/images/Nccc2nuCFV4fmG5RyJT2U8SBWERvbDzz7VK9rVeA9R-8MOVS6q9wimyVZ7rWyTcP0QJIN2QSWBie0n03zegDEdiy.jpg",
+        "assets/images/EvOGDGulg9_zjAUVNtLmaoEmC3mK_rlkszXtQ9B8D-OKTG-qyZ_-jYePyz1HJsdvo6UYjChPPxZTyIMDF1luyYBl.jpg"
+      ],
+      "category": "Для всех"
+    },
+    {
+      "title": "Настольные спортивные игры",
+      "desc": "Устали от физической активности, но всей душой любите спорт? Перевести дух, но не расставаться со спортом ни на минуту можно на площадке настольных спортивных игр! Играй и развивай свою логику, придумывай стратегии и стань победителем! Подходит для любой категории участников.",
+      "images": [
+        "assets/images/PP8D9bypvGQHoIxuVeHvgxszAcl4-78lKhwsEz4M2Z-SkNain0HMjonuz5yRSB9m2_V1OSawdjs1SpezU6wFMkyv.jpg",
+        "assets/images/7YyubKDW9IrV4V-MLI66Hz3qLFIP6qvgIrmNEuGVhLsoJfDxNALxv72HB8Cvg3saUwG5y1XeHB_9cz4V--t7siHX.jpg",
+        "assets/images/7YyubKDW9IrV4V-MLI66Hz3qLFIP6qvgIrmNEuGVhLsoJfDxNALxv72HB8Cvg3saUwG5y1XeHB_9cz4V--t7siHX.jpg",
+        "assets/images/GvpYeVrr_gbMC7cR7gbh55DTeHr5jkW1JdWhu3PRwLd-owQd4tBtoQj1sF2dat-q5CAmVoCkjQZrPaAAoHl6DR6_.jpg",
+        "assets/images/Q8bsqduqASn3nQxtDmVoBjdw5pZEpmuFVE9dzq1n4YyiWn-gKkKneMx1a_0OfE7fKp-OI1VSh_-P_MoGatBkTEB3.jpg",
+        "assets/images/9Y2K-2hrJhKk04Sh3Y9z-ySQE4E73z9b1v-2-zCpnG0lBO5otHTK4A6u3wO7gVfJ5A51-dCD7XG2ydzyBvr8Zv7c.jpg",
+        "assets/images/AYxConv0hE3MIS9Tr0hNLjzpq7-DkXDD-fFgJoYqvwotypnuKPeWV4n6aCW5LSCGrkiY1ySrplUgapZ4xHN0Rabt.jpg"
+      ],
+      "category": "Для всех"
+    },
+    {
+      "title": "Мастерская пряников",
+      "desc": "У нас для вас сюрприз — новый мастер-класс! Давайте вместе отправимся в самое сладкое путешествие. Главной задачей будет создать самый красивый и оригинальный пряник. Прояви свою фантазию и сделай свой уникальный пряник. Не пропустите этот замечательный день и приходите на наш мастер-класс! Подходит для любой категории участников.",
+      "images": [
+        "assets/images/xrfwydvDtutQRjMxXPiTCk_yMoR-NYbuAAAIHUyw1WJ0iJzm8cQzY7m1WNPwzCuGf0W5OjU4kU0z3Z73Rpli45kP.jpg",
+        "assets/images/PP8D9bypvGQHoIxuVeHvgxszAcl4-78lKhwsEz4M2Z-SkNain0HMjonuz5yRSB9m2_V1OSawdjs1SpezU6wFMkyv.jpg"
+      ],
+      "category": "Для всех"
+    },
+    {
+      "title": "Мастер-класс по рисованию",
+      "desc": "Подари себе уникальную возможность выразить себя на творческом мастер-классе по рисованию! Погрузись в палитру форм, линий и ярких красок, повысь уровень мастерства и раскрой весь свой творческий потенциал. Мы ждём тебя! Подходит для любой категории участников.",
+      "images": [
+        "https://vk.com/album-137368119_303221325",
+        "assets/images/9Y2K-2hrJhKk04Sh3Y9z-ySQE4E73z9b1v-2-zCpnG0lBO5otHTK4A6u3wO7gVfJ5A51-dCD7XG2ydzyBvr8Zv7c.jpg",
+        "assets/images/AYxConv0hE3MIS9Tr0hNLjzpq7-DkXDD-fFgJoYqvwotypnuKPeWV4n6aCW5LSCGrkiY1ySrplUgapZ4xHN0Rabt.jpg",
+        "assets/images/-Xkcx7q-7mK13XG62zNYaHoCNtO59cJ0KJT1z4IKgwCtEvrr2_cXB4FZtNpG9tKAjEnnhyuJRygrosWOwJJCVxWs.jpg"
+      ],
+      "category": "Для всех"
+    },
+    {
+      "title": "Флорбол",
+      "desc": "Знаешь, какой вид спорта — один из самых быстрых и интенсивных? Это флорбол! Специальные навыки тебе не понадобятся — достаточно одной лишь клюшки и позитивного настроя. Скорость игрока — не главное, ведь мяч всегда быстрее. А главное преимущество — играть можно везде! Подходит для любой категории участников.",
+      "images": [
+        "assets/images/0z95-YNpfLTJooDyobRaXup7sGzA3gd_FMA0NwibcRgus7qGrW-4atfaBBD9ZeHaOmVHHB29FGsUWjrY3efNiw6J.jpg",
+        "assets/images/1NSnbeglf6gK550gs4eIkbJJIuHa8fTQugQHWHmDa6NeNhq9IYd7PUrwHvtqUzWBgHYYqsXVE5Z6Yl1oZdjc6519.jpg",
+        "assets/images/Y-VFv3BWdFxmKSHPlrA7LJO9LJc9SwEFsIsw9jFjBRJ0fDIaq5HVlwLCauh7xwQ-RmXii2NBwFRHR5jDKU8Ah4Js.jpg"
+      ],
+      "category": "Для всех"
+    },
+    {
+      "title": "Бадминтон",
+      "desc": "Каким видом спорта с приходом тепла увлекаются все супергерои? Нужен воланчик и ракетка — конечно, это бадминтон! Покажи свою суперсилу в этой игре, а самым крутым супергероям удастся проявить мастерство с партнёром. Мы уже приготовили для вас настоящий бадминтонный батл!",
+      "images": [
+        "assets/images/0z95-YNpfLTJooDyobRaXup7sGzA3gd_FMA0NwibcRgus7qGrW-4atfaBBD9ZeHaOmVHHB29FGsUWjrY3efNiw6J.jpg",
+        "assets/images/1NSnbeglf6gK550gs4eIkbJJIuHa8fTQugQHWHmDa6NeNhq9IYd7PUrwHvtqUzWBgHYYqsXVE5Z6Yl1oZdjc6519.jpg",
+        "assets/images/Y-VFv3BWdFxmKSHPlrA7LJO9LJc9SwEFsIsw9jFjBRJ0fDIaq5HVlwLCauh7xwQ-RmXii2NBwFRHR5jDKU8Ah4Js.jpg",
+        "assets/images/eAFU9fRBPsdWSZL-Ft97komPxbLuTIdkpTqCn8X5pYRfg4Qccc3E0TmhcykiPGPiv9RJyTVT9Hcb84J6qGeC15US.jpg",
+        "assets/images/EqT3EsXwmtpRMCvE3ifIOaJV7qB2OSf9Ap2P2VP7hpBahBmGAqZjWoO6vGqbCfsN-iMu0FIY7hJvtaX6zwh7UKOf.jpg"
+      ],
+      "category": "Для всех"
+    },
+    {
+      "title": "Городки",
+      "desc": "Готовы пройти более 6 километров и выполнить не менее 30 приседаний за игру? Тогда скорее испытывай свои суперсилы в самой народной игре — городки! Не всё так просто — есть несколько условий: – проявить супер-точность – проявить суперсилу – взять с собой супер-азарт и мега хорошее настроение Именно по такой формуле становятся героями этой игры. Подходит для любой категории участников.",
+      "images": [
+        "assets/images/xrfwydvDtutQRjMxXPiTCk_yMoR-NYbuAAAIHUyw1WJ0iJzm8cQzY7m1WNPwzCuGf0W5OjU4kU0z3Z73Rpli45kP.jpg",
+        "assets/images/xrfwydvDtutQRjMxXPiTCk_yMoR-NYbuAAAIHUyw1WJ0iJzm8cQzY7m1WNPwzCuGf0W5OjU4kU0z3Z73Rpli45kP.jpg",
+        "assets/images/xrfwydvDtutQRjMxXPiTCk_yMoR-NYbuAAAIHUyw1WJ0iJzm8cQzY7m1WNPwzCuGf0W5OjU4kU0z3Z73Rpli45kP.jpg"
+      ],
+      "category": "Для всех"
+    }
+  ],
+  "sections": [],
+  "partners": []
+}
