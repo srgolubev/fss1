@@ -4,10 +4,16 @@ fetch('data/activities.json')
   .then(data => {
     renderFestivalDesc(data.festivalDesc);
     renderCards(data.activities);
-    renderSections(data.sections);
     renderPartners(data.partners);
     // Карта
     renderYandexMap();
+  });
+
+// Отдельная загрузка секций площадок
+fetch('data/sections.json')
+  .then(res => res.json())
+  .then(sections => {
+    renderSections(sections);
   });
 
 function renderFestivalDesc(desc) {
@@ -59,18 +65,47 @@ function renderCards(activities) {
 
 function renderSections(sections) {
   const container = document.getElementById('sections');
-  container.innerHTML = sections.map(sec => `
-    <section class="activity-section">
-      <h3>${sec.title}</h3>
-      <div class="section-desc">${sec.desc}</div>
-      <div class="section-images">
-        ${(sec.images||[]).map(img => `<img src="${img}" alt="${sec.title}" style="max-width:120px;margin:0.3em;">`).join('')}
-      </div>
-      ${sec.time ? `<div class="section-time">Время: ${sec.time}</div>` : ''}
-      ${sec.reg ? `<a href="${sec.reg}" class="section-reg">Регистрация</a>` : ''}
-    </section>
-  `).join('');
+  container.innerHTML = sections.map((sec, i) => {
+        const desc = sec.content || sec.desc || '';
+        const images = sec.images || [];
+        const reg = sec.registration || sec.reg;
+        const mainImg = images.length > 0 ? images[Math.floor(Math.random() * images.length)] : null;
+        const variant = i % 3;
+        // Вариант 1: Классическая большая card
+        if (variant === 0) {
+          return `
+            <h2 class="section-title">${sec.title}</h2>
+            <div class="card section-card section-card-1">
+              ${mainImg ? `<img class="card-img section-card-img" src="${mainImg}" alt="${sec.title}">` : ''}
+              <div class="card-desc section-card-desc">${desc.replace(/\n/g, '<br>')}</div>
+              ${reg ? `<a href="${reg}" class="section-reg section-card-reg" target="_blank">Регистрация</a>` : ''}
+            </div>
+          `;
+        }
+        // Вариант 2: Card с цветным фоном
+        if (variant === 1) {
+          return `
+            <h2 class="section-title">${sec.title}</h2>
+            <div class="card section-card section-card-2">
+              ${mainImg ? `<img class="card-img section-card-img" src="${mainImg}" alt="${sec.title}">` : ''}
+              <div class="card-desc section-card-desc">${desc.replace(/\n/g, '<br>')}</div>
+              ${reg ? `<a href="${reg}" class="section-reg section-card-reg" target="_blank">Регистрация</a>` : ''}
+            </div>
+          `;
+        }
+        // Вариант 3: Card с рамкой и смещением изображения
+        return `
+          <h2 class="section-title">${sec.title}</h2>
+          <div class="card section-card section-card-3">
+            ${mainImg ? `<img class="card-img section-card-img shifted" src="${mainImg}" alt="${sec.title}">` : ''}
+            <div class="card-desc section-card-desc">${desc.replace(/\n/g, '<br>')}</div>
+            ${reg ? `<a href="${reg}" class="section-reg section-card-reg" target="_blank">Регистрация</a>` : ''}
+          </div>
+        `;
+      }).join('');
 }
+
+
 
 function renderPartners(partners) {
   const container = document.getElementById('partners-logos');
