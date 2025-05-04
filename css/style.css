@@ -289,6 +289,31 @@ h1, h2, h3,
   from { opacity: 0; transform: scale(0.5) rotate(4deg); }
   to { opacity: 1; transform: scale(1) rotate(-2deg); }
 }
+.partners-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2.2rem 2.2rem;
+  align-items: center;
+  justify-items: center;
+  padding: 2.5rem 0 2.5rem 0;
+}
+.partners-logos-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.partners-logos-grid img {
+  width: 120px;
+  height: 80px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #00c3ff11;
+  padding: 0.6em 1.2em;
+  display: block;
+  margin: 0 auto;
+}
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

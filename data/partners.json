@@ -1,0 +1,35 @@
+  [
+  {
+    "name": "SuperStep",
+    "logo": "assets/images/partners/SuperStep.png",
+    "link": "https://superstep.ru"
+  },
+  {
+    "name": "Москомспорт",
+    "logo": "assets/images/partners/Москомспорт.png"
+  },
+  {
+    "name": "ПФК ЦСКС",
+    "logo": "assets/images/partners/ПФК ЦСКС.svg.png"
+  },
+  {
+    "name": "РК ЦСКА",
+    "logo": "assets/images/partners/РК ЦСКА.png.webp"
+  },
+  {
+    "name": "РМГ",
+    "logo": "assets/images/partners/РМГ.svg.png"
+  },
+  {
+    "name": "ФК Родина",
+    "logo": "assets/images/partners/ФК Родина.svg.png"
+  },
+  {
+    "name": "ФК Спартак",
+    "logo": "assets/images/partners/ФК Спартак.png"
+  },
+  {
+    "name": "Чемпионат",
+    "logo": "assets/images/partners/Чемпионат.png"
+  }
+]
