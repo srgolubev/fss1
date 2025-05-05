@@ -15,13 +15,22 @@ fetch("data/partners.json")
     renderPartners(partners);
   });
 
-// Отдельная загрузка секций площадок
-fetch("data/sections.json")
-  .then((res) => res.json())
-  .then((sections) => {
-    renderSections(sections);
-    renderSectionsMenu(sections);
-  });
+// --- Автообновление меню и секций при изменении sections.json ---
+let lastSectionsData = null;
+function fetchAndUpdateSectionsMenu() {
+  fetch("data/sections.json")
+    .then(res => res.json())
+    .then(sections => {
+      const newData = JSON.stringify(sections);
+      if (lastSectionsData !== newData) {
+        lastSectionsData = newData;
+        renderSections(sections);
+        renderSectionsMenu(sections);
+      }
+    });
+}
+fetchAndUpdateSectionsMenu();
+setInterval(fetchAndUpdateSectionsMenu, 10000);
 
 // --- Мобильное меню ---
 document.addEventListener('DOMContentLoaded', function() {
@@ -183,25 +192,21 @@ function renderSectionsMenu(sections) {
     if (grouped[cat].length === 1) {
       // Одиночный пункт
       const sec = grouped[cat][0];
-      const id = sectionIdByTitle[sec.title]
-        ? `#${sectionIdByTitle[sec.title]}`
-        : "#";
-      html += `<li><a href="${id}" class="sections-menu-link">${sec.title}</a></li>`;
+      html += `<li><a href="#${sectionIdByTitle[sec.title]}">${sec.title}</a></li>`;
     } else {
       // Категория с выпадающим списком
       html +=
         `<li class="sections-menu-dropdown"><span class="dropdown-title">${cat}<span class="dropdown-arrow">▼</span></span><ul class="sections-menu-dropdown-list">` +
         grouped[cat]
           .map((sec) => {
-            const id = sectionIdByTitle[sec.title]
-              ? `#${sectionIdByTitle[sec.title]}`
-              : "#";
-            return `<li><a href="${id}" class="sections-menu-link">${sec.title}</a></li>`;
+            return `<li><a href="#${sectionIdByTitle[sec.title]}">${sec.title}</a></li>`;
           })
           .join("") +
         `</ul></li>`;
     }
   });
+  // Добавляем пункт "Партнёры" в конец меню
+  html += '<li><a href="#partners">Партнёры</a></li>';
   html += `</ul>`;
   menu.innerHTML = html;
   // Плавный скролл
@@ -231,6 +236,8 @@ function renderPartners(partners) {
       `).join('')}
     </div>
   `;
+  // Применяем класс для сетки с 4 колонками (CSS будет обновлён)
+
 }
 
 function renderYandexMap() {
