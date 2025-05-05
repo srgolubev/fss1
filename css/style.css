@@ -437,6 +437,30 @@ footer {
   }
 }
 
+/* --- Одиночные пункты меню --- */
+.sections-menu-link {
+  color: #00c3ff;
+  text-decoration: none;
+  font-family: 'BadaBoomBB', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.22rem;
+  letter-spacing: 1px;
+  padding: 0.45em 0.9em;
+  display: inline-block;
+  border-radius: 14px;
+  transition: background 0.18s, color 0.18s;
+}
+.sections-menu-link:hover,
+.sections-menu-link:focus {
+  background: #e6f7ff;
+  color: #ffa751;
+  text-decoration: none;
+}
+.sections-menu-link:active {
+  background: #b2eaff;
+  color: #ffa751;
+}
+
 /* --- Мобильное меню --- */
 .mobile-menu-btn {
   display: none;

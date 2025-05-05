@@ -192,21 +192,22 @@ function renderSectionsMenu(sections) {
     if (grouped[cat].length === 1) {
       // Одиночный пункт
       const sec = grouped[cat][0];
-      html += `<li><a href="#${sectionIdByTitle[sec.title]}">${sec.title}</a></li>`;
+      html += `<li><a href="#${sectionIdByTitle[sec.title]}" class="sections-menu-link">${sec.title}</a></li>`;
     } else {
       // Категория с выпадающим списком
       html +=
         `<li class="sections-menu-dropdown"><span class="dropdown-title">${cat}<span class="dropdown-arrow">▼</span></span><ul class="sections-menu-dropdown-list">` +
         grouped[cat]
           .map((sec) => {
-            return `<li><a href="#${sectionIdByTitle[sec.title]}">${sec.title}</a></li>`;
+            return `<li><a href="#${sectionIdByTitle[sec.title]}" class="sections-menu-link">${sec.title}</a></li>`;
           })
           .join("") +
         `</ul></li>`;
     }
   });
-  // Добавляем пункт "Партнёры" в конец меню
-  html += '<li><a href="#partners">Партнёры</a></li>';
+  // Добавляем пункт "Пресс-центр" и "Партнёры" в конец меню
+  html += '<li><a href="#press-center" class="sections-menu-link">Пресс-центр</a></li>';
+  html += '<li><a href="#partners" class="sections-menu-link">Партнёры</a></li>';
   html += `</ul>`;
   menu.innerHTML = html;
   // Плавный скролл
@@ -216,6 +217,13 @@ function renderSectionsMenu(sections) {
       const target = document.querySelector(hash);
       if (target && hash !== "#") {
         e.preventDefault();
+        // Закрываем мобильное меню, если оно открыто
+        const navMenu = document.getElementById('sections-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        if (window.matchMedia('(max-width: 700px)').matches) {
+          navMenu.classList.remove('open');
+          overlay.classList.remove('active');
+        }
         window.scrollTo({
           top: target.getBoundingClientRect().top + window.scrollY - 60,
           behavior: "smooth",
