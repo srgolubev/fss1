@@ -1,32 +1,33 @@
 /* Стили для секций-площадок в стиле карточек активности */
 
 .section-card-btn {
-  display: block;
+  display: inline-block;
   margin: 1.1em auto 0.5em auto;
-  padding: 0.7em 0.7em;
-  font-size: 1.18rem;
+  padding: 0.6em 1.8em;
+  font-size: 1.04rem;
   font-family: 'BadaBoomBB', Arial, sans-serif;
-  text-align: center; 
-  color: #fffbe7;
-  background: linear-gradient(90deg, #e38111 0%, #ffa751 100%);
+  color: #fff;
+  background: linear-gradient(90deg, #38b6ff 0%, #ffa751 100%);
   border: none;
-  border-radius: 16px;
+  border-radius: 11px;
   text-decoration: none;
-  font-weight: bold;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 18px #00c3ff33, 0 0 0 3px #fffbe7 inset;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  box-shadow: 0 2px 8px #00c3ff22;
   transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.14s;
+  position: relative;
   cursor: pointer;
   outline: none;
   max-width: 320px;
-  width: 50%;
 }
 
 .section-card-btn:hover, .section-card-btn:focus {
-  background: linear-gradient(90deg, #ffa751 0%, #7ad91c 100%);
-  color: #fff;
-  box-shadow: 0 6px 24px #ffa75177, 0 0 0 4px #00c3ff33 inset;
+  background: linear-gradient(90deg, #ffa751 0%, #38b6ff 100%);
+  color: #222;
+  box-shadow: 0 4px 16px #ffa75133, 0 0 0 2px #38b6ff55;
   transform: translateY(-2px) scale(1.04);
+  text-decoration: none;
+}
   text-decoration: none;
 }
 
@@ -174,6 +175,14 @@
 .sections-menu-dropdown:hover .sections-menu-dropdown-list {
   display: block;
 }
+@media (max-width: 700px) {
+  .sections-menu-dropdown:hover .sections-menu-dropdown-list {
+    display: none !important;
+  }
+}
+.sections-menu-dropdown.open .sections-menu-dropdown-list {
+  display: block !important;
+}
 .sections-menu-dropdown-list li {
   margin: 0.2em 0;
 }
@@ -222,6 +231,20 @@
 @media (max-width: 700px) {
   .section-card-img {
     max-height: 180px;
+  }
+  .sections-menu-dropdown-list {
+    position: static !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding-left: 0.7em !important;
+    min-width: 0 !important;
+    margin-bottom: 0.5em;
+    border-radius: 0;
+    z-index: auto !important;
+    display: none;
+  }
+  .sections-menu-dropdown.open .sections-menu-dropdown-list {
+    display: block !important;
   }
 }
 

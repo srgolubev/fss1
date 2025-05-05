@@ -23,6 +23,52 @@ fetch("data/sections.json")
     renderSectionsMenu(sections);
   });
 
+// --- Мобильное меню ---
+document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('sections-menu');
+  const overlay = document.getElementById('mobile-menu-overlay');
+  if (menuBtn && navMenu && overlay) {
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      overlay.classList.toggle('active');
+    });
+    overlay.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+      overlay.classList.remove('active');
+    });
+  }
+
+  // --- Dropdown по тапу на мобильных ---
+  function isMobileMenu() {
+    return window.matchMedia('(max-width: 700px)').matches;
+  }
+  navMenu.addEventListener('click', function(e) {
+    if (!isMobileMenu()) return;
+    const title = e.target.closest('.dropdown-title');
+    if (title) {
+      e.preventDefault();
+      const dropdown = title.closest('.sections-menu-dropdown');
+      if (dropdown) {
+        dropdown.classList.toggle('open');
+      }
+    }
+  });
+  // При открытии меню закрываем другие dropdown
+  navMenu.addEventListener('click', function(e) {
+    if (!isMobileMenu()) return;
+    const title = e.target.closest('.dropdown-title');
+    if (title) {
+      const dropdowns = navMenu.querySelectorAll('.sections-menu-dropdown');
+      dropdowns.forEach(dd => {
+        if (dd !== title.closest('.sections-menu-dropdown')) {
+          dd.classList.remove('open');
+        }
+      });
+    }
+  });
+});
+
 function renderFestivalDesc(desc) {
   document.querySelector(".festival-desc").innerHTML = `<p>${desc}</p>`;
 }
