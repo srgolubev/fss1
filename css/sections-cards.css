@@ -3,11 +3,12 @@
 .section-card-btn {
   display: block;
   margin: 1.1em auto 0.5em auto;
-  padding: 0.7em 2.2em;
+  padding: 0.7em 0.7em;
   font-size: 1.18rem;
   font-family: 'BadaBoomBB', Arial, sans-serif;
+  text-align: center; 
   color: #fffbe7;
-  background: linear-gradient(90deg, #00c3ff 0%, #ffa751 100%);
+  background: linear-gradient(90deg, #e38111 0%, #ffa751 100%);
   border: none;
   border-radius: 16px;
   text-decoration: none;
@@ -18,11 +19,11 @@
   cursor: pointer;
   outline: none;
   max-width: 320px;
-  width: 100%;
+  width: 50%;
 }
 
 .section-card-btn:hover, .section-card-btn:focus {
-  background: linear-gradient(90deg, #ffa751 0%, #00c3ff 100%);
+  background: linear-gradient(90deg, #ffa751 0%, #7ad91c 100%);
   color: #fff;
   box-shadow: 0 6px 24px #ffa75177, 0 0 0 4px #00c3ff33 inset;
   transform: translateY(-2px) scale(1.04);

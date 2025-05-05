@@ -183,13 +183,20 @@ h1, h2, h3,
   text-decoration: none;
   font-family: 'BadaBoomBB', Arial, sans-serif;
   letter-spacing: 1.2px;
-  margin: 0;
+  margin: 2rem auto 0 auto;
   position: relative;
   z-index: 1;
   transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
-  animation: btnPop 1.2s cubic-bezier(.7,-0.15,.27,1.15) 0.5s both;
+  text-align: center;
 }
+
+.hero-btn-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .hero-btn:hover {
   background: #ffe259;
@@ -477,9 +484,10 @@ footer {
   gap: 2rem;
 }
 .footer-logo {
-  width: 90px;
+  width: 250px;
   height: auto;
   margin-bottom: 1rem;
+  filter: saturate(0%) brightness(200%);
 }
 .footer-contacts p, .footer-contacts a {
   color: #fff;
