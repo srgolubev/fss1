@@ -205,8 +205,7 @@ function renderSectionsMenu(sections) {
         `</ul></li>`;
     }
   });
-  // Добавляем пункт "Пресс-центр" и "Партнёры" в конец меню
-  html += '<li><a href="#press-center" class="sections-menu-link">Пресс-центр</a></li>';
+  // Добавляем пункт "Партнёры" в конец меню
   html += '<li><a href="#partners" class="sections-menu-link">Партнёры</a></li>';
   html += `</ul>`;
   menu.innerHTML = html;
