@@ -443,7 +443,7 @@ footer {
   text-decoration: none;
   font-family: 'BadaBoomBB', Arial, sans-serif;
   font-weight: bold;
-  font-size: 1.22rem;
+  font-size: 1.1rem;
   letter-spacing: 1px;
   padding: 0.45em 0.9em;
   display: inline-block;
@@ -599,8 +599,6 @@ footer {
   margin-bottom: 32px;
 }
 
-  margin-top: 2rem;
-}
 .footer-content {
   display: flex;
   flex-wrap: wrap;

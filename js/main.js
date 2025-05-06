@@ -1,36 +1,39 @@
 // Загрузка данных и рендеринг карточек и секций
+let activitiesData = null;
+let sectionsData = null;
+
+// Загружаем activities.json
 fetch("data/activities.json")
   .then((res) => res.json())
   .then((data) => {
+    activitiesData = data.activities;
     renderFestivalDesc(data.festivalDesc);
-    renderCards(data.activities);
-    // Карта
     renderYandexMap();
+    tryRenderAll();
   });
 
-// Загрузка партнёров из отдельного файла
+// Загружаем sections.json и партнёров
+fetch("data/sections.json")
+  .then(res => res.json())
+  .then(sections => {
+    sectionsData = sections;
+    tryRenderAll();
+    renderSectionsMenu(sections);
+  });
+
 fetch("data/partners.json")
   .then((res) => res.json())
   .then((partners) => {
     renderPartners(partners);
   });
 
-// --- Автообновление меню и секций при изменении sections.json ---
-let lastSectionsData = null;
-function fetchAndUpdateSectionsMenu() {
-  fetch("data/sections.json")
-    .then(res => res.json())
-    .then(sections => {
-      const newData = JSON.stringify(sections);
-      if (lastSectionsData !== newData) {
-        lastSectionsData = newData;
-        renderSections(sections);
-        renderSectionsMenu(sections);
-      }
-    });
+function tryRenderAll() {
+  if (activitiesData && sectionsData) {
+    renderSections(sectionsData);
+    renderActivitiesBlock(activitiesData);
+  }
 }
-fetchAndUpdateSectionsMenu();
-setInterval(fetchAndUpdateSectionsMenu, 10000);
+
 
 // --- Мобильное меню ---
 document.addEventListener('DOMContentLoaded', function() {
@@ -127,43 +130,79 @@ function renderCards(activities) {
   });
 }
 
+function renderSectionHTML(sec) {
+  const id =
+    "section-" +
+    sec.title
+      .toLowerCase()
+      .replace(/[^a-zа-я0-9]+/gi, "-")
+      .replace(/^-+|-+$/g, "");
+  const desc = sec.content || sec.desc || "";
+  const images = sec.images || [];
+  const reg = sec.registration || sec.reg;
+  const mainImg = images.length > 0 ? images[0] : null;
+  return `<section id="${id}" class="section-card">
+    <h3 class="section-card-title">${sec.title}</h3>
+    ${mainImg ? `<img class="section-card-img" src="${mainImg}" alt="${sec.title}">` : ""}
+    ${desc ? `<div class="section-card-content">${desc.replace(/\n/g, "<br>")}</div>` : ""}
+    ${reg ? `<a href="${reg}" class="section-card-btn" target="_blank">Регистрация</a>` : ""}
+    ${sec.time ? `<div class="section-card-time">${sec.time}</div>` : ""}
+  </section>`;
+}
+
 function renderSections(sections) {
   const container = document.getElementById("sections");
-  // Группировка секций по категориям
-  const grouped = {};
-  sections.forEach((sec) => {
-    const cat = sec.category || "Другое";
-    if (!grouped[cat]) grouped[cat] = [];
-    grouped[cat].push(sec);
-  });
-  const categories = Object.keys(grouped);
   let html = "";
-  categories.forEach((cat) => {
-    html += `<div class="section-category-group">
-      <h2 class="section-category-title">${cat}</h2>`;
-    grouped[cat].forEach((sec) => {
-      const id =
-        "section-" +
-        sec.title
-          .toLowerCase()
-          .replace(/[^a-zа-я0-9]+/gi, "-")
-          .replace(/^-+|-+$/g, "");
-      const desc = sec.content || sec.desc || "";
-      const images = sec.images || [];
-      const reg = sec.registration || sec.reg;
-      const mainImg = images.length > 0 ? images[0] : null;
-      html += `<section id="${id}" class="section-card">
-        <h3 class="section-card-title">${sec.title}</h3>
-        ${mainImg ? `<img class="section-card-img" src="${mainImg}" alt="${sec.title}">` : ""}
-        ${desc ? `<div class="section-card-content">${desc.replace(/\n/g, "<br>")}</div>` : ""}
-        ${reg ? `<a href="${reg}" class="section-card-btn" target="_blank">Регистрация</a>` : ""}
-        ${sec.time ? `<div class="section-card-time">${sec.time}</div>` : ""}
-      </section>`;
-    });
-    html += "</div>";
+  // 1. Соревнования
+  const sor = sections.filter(sec => sec.category === "Соревнования");
+  if (sor.length) {
+    html += `<div class="section-category-group"><h2 class="section-category-title">Соревнования</h2>`;
+    sor.forEach(sec => { html += renderSectionHTML(sec); });
+    html += `</div>`;
+  }
+  // 2. Семейные
+  const sem = sections.filter(sec => sec.category === "Семейные");
+  if (sem.length) {
+    html += `<div class="section-category-group"><h2 class="section-category-title">Семейные</h2>`;
+    sem.forEach(sec => { html += renderSectionHTML(sec); });
+    html += `</div>`;
+  }
+  // 3. Placeholder для блока Активности
+  html += '<section id="activities-placeholder"></section>';
+  // 4. Остальные секции (по категориям)
+  const cats = [...new Set(sections.map(sec => sec.category))].filter(cat => cat !== "Соревнования" && cat !== "Семейные");
+  cats.forEach(cat => {
+    const catSecs = sections.filter(sec => sec.category === cat);
+    if (catSecs.length) {
+      html += `<div class="section-category-group"><h2 class="section-category-title">${cat}</h2>`;
+      catSecs.forEach(sec => { html += renderSectionHTML(sec); });
+      html += `</div>`;
+    }
   });
   container.innerHTML = html;
 }
+
+// После рендера секций — рендерим активити-блок в placeholder
+function renderActivitiesBlock(activities) {
+  const ph = document.getElementById('activities-placeholder');
+  if (!ph) return;
+  ph.outerHTML = `
+  <section id="activities" class="activities">
+    <div class="cards-swiper-wrap">
+      <h2>Активности</h2>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      <div class="swiper cards-swiper" id="cards-swiper">
+        <div class="swiper-wrapper" id="cards-grid"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+
+  </section>`;
+  renderCards(activities);
+}
+
 
 function renderSectionsMenu(sections) {
   const menu = document.getElementById("sections-menu");
@@ -187,14 +226,33 @@ function renderSectionsMenu(sections) {
     sectionIdByTitle[sec.title.trim()] = id;
   });
   let html = `<ul class="sections-menu-list">`;
+  const priorityCategories = ["Соревнования", "Семейные"];
+  // Сначала приоритетные категории
+  priorityCategories.forEach(cat => {
+    if (grouped[cat]) {
+      if (grouped[cat].length === 1) {
+        const sec = grouped[cat][0];
+        html += `<li><a href="#${sectionIdByTitle[sec.title]}" class="sections-menu-link">${sec.title}</a></li>`;
+      } else {
+        html +=
+          `<li class="sections-menu-dropdown"><span class="dropdown-title">${cat}<span class="dropdown-arrow">▼</span></span><ul class="sections-menu-dropdown-list">` +
+          grouped[cat]
+            .map((sec) => {
+              return `<li><a href="#${sectionIdByTitle[sec.title]}" class="sections-menu-link">${sec.title}</a></li>`;
+            })
+            .join("") +
+          `</ul></li>`;
+      }
+    }
+  });
+  // Затем блок Активности
   html += `<li><a href="#activities" class="sections-menu-link">Активности</a></li>`;
-  categories.forEach((cat) => {
+  // Остальные категории
+  categories.filter(cat => !priorityCategories.includes(cat)).forEach(cat => {
     if (grouped[cat].length === 1) {
-      // Одиночный пункт
       const sec = grouped[cat][0];
       html += `<li><a href="#${sectionIdByTitle[sec.title]}" class="sections-menu-link">${sec.title}</a></li>`;
     } else {
-      // Категория с выпадающим списком
       html +=
         `<li class="sections-menu-dropdown"><span class="dropdown-title">${cat}<span class="dropdown-arrow">▼</span></span><ul class="sections-menu-dropdown-list">` +
         grouped[cat]
@@ -205,8 +263,6 @@ function renderSectionsMenu(sections) {
         `</ul></li>`;
     }
   });
-  // Добавляем пункт "Партнёры" в конец меню
-  html += '<li><a href="#partners" class="sections-menu-link">Партнёры</a></li>';
   html += `</ul>`;
   menu.innerHTML = html;
   // Плавный скролл
