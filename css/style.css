@@ -493,6 +493,53 @@ footer {
   z-index: 1000;
 }
 #mobile-menu-overlay.active { display: block; }
+.cookie-consent-bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 3000;
+  background: #222;
+  color: #fff;
+  padding: 1.1em 1.5em 1.1em 1.5em;
+  font-size: 1.07em;
+  text-align: left;
+  box-shadow: 0 -2px 18px #0002;
+  display: flex;
+  align-items: center;
+  gap: 1.3em;
+  animation: cookieBarIn 0.5s cubic-bezier(.7,-0.15,.27,1.15);
+  transition: opacity 0.35s, transform 0.35s;
+}
+.cookie-consent-bar a {
+  color: #ffe259;
+  text-decoration: underline;
+}
+.cookie-consent-bar .cookie-consent-btn {
+  margin-left: auto;
+  background: #ffe259;
+  color: #222;
+  border: none;
+  border-radius: 12px;
+  padding: 0.4em 1.4em;
+  font-size: 1em;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 1px 1px 0 #ffa751;
+  transition: background 0.2s, color 0.2s;
+}
+.cookie-consent-bar .cookie-consent-btn:hover {
+  background: #00c3ff;
+  color: #fff;
+}
+.cookie-consent-hide {
+  opacity: 0;
+  transform: translateY(100%);
+  pointer-events: none;
+}
+@keyframes cookieBarIn {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 700px) {
   .mobile-menu-btn { display: flex; }
   #sections-menu {
