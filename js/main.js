@@ -232,7 +232,8 @@ function renderSectionsMenu(sections) {
     if (grouped[cat]) {
       if (grouped[cat].length === 1) {
         const sec = grouped[cat][0];
-        html += `<li><a href="#${sectionIdByTitle[sec.title]}" class="sections-menu-link">${sec.title}</a></li>`;
+        // Для одиночных секций используем category как подпись, но якорь по title
+html += `<li><a href="#${sectionIdByTitle[sec.title]}" class="sections-menu-link">${cat}</a></li>`;
       } else {
         html +=
           `<li class="sections-menu-dropdown"><span class="dropdown-title">${cat}<span class="dropdown-arrow">▼</span></span><ul class="sections-menu-dropdown-list">` +
@@ -251,7 +252,8 @@ function renderSectionsMenu(sections) {
   categories.filter(cat => !priorityCategories.includes(cat)).forEach(cat => {
     if (grouped[cat].length === 1) {
       const sec = grouped[cat][0];
-      html += `<li><a href="#${sectionIdByTitle[sec.title]}" class="sections-menu-link">${sec.title}</a></li>`;
+      // Для одиночных секций используем category как подпись, но якорь по title
+html += `<li><a href="#${sectionIdByTitle[sec.title]}" class="sections-menu-link">${cat}</a></li>`;
     } else {
       html +=
         `<li class="sections-menu-dropdown"><span class="dropdown-title">${cat}<span class="dropdown-arrow">▼</span></span><ul class="sections-menu-dropdown-list">` +
