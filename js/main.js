@@ -324,3 +324,22 @@ function renderYandexMap() {
   };
   document.body.appendChild(script);
 }
+
+// Scroll to Top Button
+// Теперь обработчики навешиваются только после полной загрузки DOM
+
+document.addEventListener('DOMContentLoaded', function() {
+  const toTopBtn = document.getElementById('toTopBtn');
+  if (toTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        toTopBtn.classList.add('visible');
+      } else {
+        toTopBtn.classList.remove('visible');
+      }
+    });
+    toTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+});

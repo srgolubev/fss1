@@ -568,6 +568,58 @@ h1, h2, h3,
 
 #mobile-menu-overlay.active { display: block; }
 
+/* ======= Scroll to Top Button ======= */
+#toTopBtn {
+  position: fixed;
+  right: 28px;
+  bottom: 32px;
+  z-index: 1000;
+  width: 56px;
+  height: 56px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.2s;
+  box-shadow: 0 2px 16px #00c3ff22;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#toTopBtn svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+#toTopBtn svg {
+  display: block;
+}
+#toTopBtn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+#toTopBtn:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 4px 24px #00c3ff33;
+}
+@media (max-width: 600px) {
+  #toTopBtn {
+    right: 12px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+  }
+  #toTopBtn svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 /* --- Cookie consent --- */
 .cookie-consent-bar {
   position: fixed;
