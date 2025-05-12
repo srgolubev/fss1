@@ -568,6 +568,16 @@ h1, h2, h3,
 
 #mobile-menu-overlay.active { display: block; }
 
+/* Центрированный список с буллетами */
+.centered-list {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+}
+.centered-list li {
+  text-align: left;
+}
+
 /* ======= Scroll to Top Button ======= */
 #toTopBtn {
   position: fixed;
