@@ -311,11 +311,11 @@ function renderYandexMap() {
   script.onload = () => {
     ymaps.ready(() => {
       const map = new ymaps.Map("yandex-map", {
-        center: [55.714422, 37.560588],
+        center: [55.715527, 37.561301],
         zoom: 16,
       });
       map.geoObjects.add(
-        new ymaps.Placemark([55.714422, 37.560588], {
+        new ymaps.Placemark([55.715527, 37.561301], {
           balloonContent:
             "Олимпийский комплекс «Лужники», Южное спортивное ядро",
         }),
