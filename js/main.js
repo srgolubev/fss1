@@ -325,7 +325,38 @@ function renderYandexMap() {
   document.body.appendChild(script);
 }
 
-// Scroll to Top Button
+// ===== Main Stage Schedule Render =====
+document.addEventListener('DOMContentLoaded', function() {
+  const scheduleTable = document.getElementById('main-stage-schedule-table');
+  if (scheduleTable) {
+    fetch('data/main_stage_schedule.json')
+      .then(response => response.json())
+      .then(schedule => {
+        const table = document.createElement('div');
+        table.className = 'schedule-table';
+
+        schedule.forEach(item => {
+          const row = document.createElement('div');
+          row.className = 'schedule-row';
+
+          const time = document.createElement('div');
+          time.className = 'schedule-time';
+          time.textContent = item.time;
+
+          const event = document.createElement('div');
+          event.className = 'schedule-event';
+          event.textContent = item.event;
+
+          row.appendChild(time);
+          row.appendChild(event);
+          table.appendChild(row);
+        });
+        scheduleTable.appendChild(table);
+      });
+  }
+});
+
+// ===== Scroll to Top Button =====
 // Теперь обработчики навешиваются только после полной загрузки DOM
 
 document.addEventListener('DOMContentLoaded', function() {
