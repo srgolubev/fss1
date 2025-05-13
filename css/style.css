@@ -578,6 +578,41 @@ h1, h2, h3,
   text-align: left;
 }
 
+/* Организаторы: увеличенные белые подложки и логотипы */
+.organizers-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin: 32px 0 24px 0;
+}
+.organizer-logo {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.05);
+  padding: 32px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  min-width: 320px;
+  max-width: 380px;
+}
+.organizer-logo img {
+  max-height: 96px;
+  max-width: 280px;
+  object-fit: contain;
+}
+
+.organizer-support-label {
+  color: #888;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 18px 0 6px 0;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
 /* ======= Scroll to Top Button ======= */
 #toTopBtn {
   position: fixed;

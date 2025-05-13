@@ -1,7 +1,6 @@
 [
   
-  { "name": "МОСКОВСКОЕ ОБРАЗОВАНИЕ", "logo": "assets/images/partners/МОСКОВСКОЕ_ОБРАЗОВАНИЕ_логотип_гориз.png" },
-  { "name": "Московский Спорт", "logo": "assets/images/partners/Москомспорт.png" },
+
   { "name": "МЦВП спорт", "logo": "assets/images/partners/МЦВП спорт (цвет)_1короткий.png.png" },
   { "name": "ПФК ЦСКС", "logo": "assets/images/partners/ПФК ЦСКС.svg.png" },
   { "name": "ФК Спартак", "logo": "assets/images/partners/ФК Спартак.png" },
@@ -10,6 +9,7 @@
   { "name": "ФК Родина", "logo": "assets/images/partners/ФК Родина.svg.png" },
   { "name": "Чемпионат", "logo": "assets/images/partners/Чемпионат.png" },
   { "name": "Dfm", "logo": "assets/images/partners/Dfm.png" },
-  { "name": "Триколор спорт", "logo": "assets/images/partners/Триколор_спорт_цвет_вертик.png" }
+  { "name": "Триколор спорт", "logo": "assets/images/partners/Триколор_спорт_цвет_вертик.png" },
+  { "name": "Триколор детям", "logo": "assets/images/partners/tricd@2x.png" }
 ]
 
