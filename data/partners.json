@@ -1,15 +1,15 @@
 [
   
 
-  { "name": "МЦВП спорт", "logo": "assets/images/partners/МЦВП спорт (цвет)_1короткий.png.png" },
-  { "name": "ПФК ЦСКС", "logo": "assets/images/partners/ПФК ЦСКС.svg.png" },
-  { "name": "ФК Спартак", "logo": "assets/images/partners/ФК Спартак.png" },
-  { "name": "РК ЦСКА", "logo": "assets/images/partners/РК ЦСКА.png.webp" },
+  { "name": "МЦВП спорт", "logo": "assets/images/partners/МЦВП спорт (цвет)_1короткий.png.png", "link": "https://schoolsportmos.ru/" },
+  { "name": "ПФК ЦСКС", "logo": "assets/images/partners/ПФК ЦСКС.svg.png", "link": "https://pfc-cska.com/" },
+  { "name": "ФК Спартак", "logo": "assets/images/partners/ФК Спартак.png", "link": "https://spartak.com/" },
+  { "name": "РК ЦСКА", "logo": "assets/images/partners/РК ЦСКА.png.webp", "link": "https://www.cska-rugby.ru/" },
   { "name": "SuperStep", "logo": "assets/images/partners/SuperStep.png", "link": "https://superstep.ru" },
-  { "name": "ФК Родина", "logo": "assets/images/partners/ФК Родина.svg.png" },
-  { "name": "Чемпионат", "logo": "assets/images/partners/Чемпионат.png" },
-  { "name": "Dfm", "logo": "assets/images/partners/Dfm.png" },
-  { "name": "Триколор спорт", "logo": "assets/images/partners/Триколор_спорт_цвет_вертик.png" },
-  { "name": "Триколор детям", "logo": "assets/images/partners/tricd@2x.png" }
+  { "name": "ФК Родина", "logo": "assets/images/partners/ФК Родина.svg.png", "link": "https://fcrodina.com/" },
+  { "name": "Чемпионат", "logo": "assets/images/partners/Чемпионат.png", "link": "https://www.championat.com/" },
+  { "name": "Dfm", "logo": "assets/images/partners/Dfm.png", "link": "https://dfm.ru/" },
+  { "name": "Триколор спорт", "logo": "assets/images/partners/Триколор_спорт_цвет_вертик.png", "link": "https://kino.tricolor.ru/sport/" },
+  { "name": "Триколор детям", "logo": "assets/images/partners/tricd@2x.png", "link": "https://kids.tricolor.ru/" }
 ]
 
