@@ -43,7 +43,7 @@ h1, h2, h3,
 
 /* --- Герой-секция --- */
 .hero {
-  background: #fffbe7 url('../assets/images/bg_green.svg') center center/cover no-repeat;
+  background: #fffbe7 url('../assets/images/bg_green.webp') center center/cover no-repeat;
   text-align: center;
   padding: 3.5rem 1rem 2.5rem 1rem;
   position: relative;
