@@ -10,6 +10,8 @@
   { "name": "Чемпионат", "logo": "assets/images/partners/Чемпионат.png", "link": "https://www.championat.com/" },
   { "name": "Dfm", "logo": "assets/images/partners/Dfm.png", "link": "https://dfm.ru/" },
   { "name": "Триколор спорт", "logo": "assets/images/partners/Триколор_спорт_цвет_вертик.png", "link": "https://kino.tricolor.ru/sport/" },
-  { "name": "Триколор детям", "logo": "assets/images/partners/tricd@2x.png", "link": "https://kids.tricolor.ru/" }
+  { "name": "Триколор детям", "logo": "assets/images/partners/tricd@2x.png", "link": "https://kids.tricolor.ru/" },
+  { "name": "РФС", "logo": "assets/images/partners/logo-blue-d_rgb.png", "link": "https://rfs.ru/" },
+  { "name": "Движение Первых", "logo": "assets/images/partners/DVP.svg", "link": "https://xn--90acagbhgpca7c8c7f.xn--p1ai/" }
 ]
 
